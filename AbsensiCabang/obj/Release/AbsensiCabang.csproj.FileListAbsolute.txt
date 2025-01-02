@@ -1,0 +1,4 @@
+D:\Sinau\dotnet\ambil-data-mesin-absen-X100C-dengan-CSharp-master\AbsensiCabang\obj\Release\AbsensiCabang.csproj.AssemblyReference.cache
+D:\Sinau\dotnet\ambil-data-mesin-absen-X100C-dengan-CSharp-master\AbsensiCabang\obj\Release\AbsensiCabang.csproj.SuggestedBindingRedirects.cache
+D:\Sinau\dotnet\ambil-data-mesin-absen-X100C-dengan-CSharp-master\AbsensiCabang\obj\Release\AbsensiCabang.exe.config
+D:\Sinau\dotnet\ambil-data-mesin-absen-X100C-dengan-CSharp-master\AbsensiCabang\obj\Release\AbsensiCabang.csproj.CoreCompileInputs.cache

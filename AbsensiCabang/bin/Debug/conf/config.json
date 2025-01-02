@@ -1,0 +1,12 @@
+{
+  "DbInfo": {
+    "dbConnection": "Host=172.16.1.96;Port=5432;Database=NakulaClient;Username=postgres;Password=index.123;"
+  },
+  "FingerInfo": {
+    "id": "1",
+    "ip": "192.168.150.178",
+    "port": 4370,
+    "maxScan": 30,
+    "timeout": 30
+  }
+}
