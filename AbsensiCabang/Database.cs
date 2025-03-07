@@ -50,13 +50,15 @@ namespace AbsensiCabang
                             return model;
                         }
                     }
+
+                    conn.Close();
                 }
 
                 return new ModelAbsen();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"error message: {ex.Message}");
+                Console.WriteLine($"Error message GetAbsen: {ex.Message}");
                 throw;
             }
         }
@@ -81,13 +83,15 @@ namespace AbsensiCabang
                             return model;
                         }
                     }
+
+                    conn.Close();
                 }
 
                 return new ModelFinger();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"error message: {ex.Message}");
+                Console.WriteLine($"Error message GetFinger: {ex.Message}");
                 throw;
             }
         }
@@ -103,10 +107,11 @@ namespace AbsensiCabang
                     "print_count=finger_count " +
                     "WHERE tanggal=NOW()::date AND nik='" + absen.Nik + "'", conn);
                 await cmd.ExecuteNonQueryAsync();
+                conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"error message: {ex.Message}");
+                Console.WriteLine($"Error message UpdatePrinter: {ex.Message}");
                 throw;
             }
         }
@@ -127,10 +132,11 @@ namespace AbsensiCabang
                     "status_kerja='" + absen.StatusKerja + "'" +
                     "WHERE tanggal=NOW()::date AND nik='" + absen.Nik + "'", conn);
                 await cmd.ExecuteNonQueryAsync();
+                conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"error message: {ex.Message}");
+                Console.WriteLine($"Error message UpdateFinger: {ex.Message}");
                 throw;
             }
         }
@@ -144,10 +150,11 @@ namespace AbsensiCabang
                 var cmd = new NpgsqlCommand("INSERT INTO tbl_absen (tanggal, nik, nama_lengkap, finger_count, finger_date, finger_id, finger_ip, print_id, print_ip, status_kerja) " +
                     "VALUES (NOW()::date, '" + absen.Nik + "', '" + absen.NamaLengkap + "', 1, NOW(), '" + absen.FingerId + "', '" + absen.FingerIp + "', '" + absen.PrintId + "', '" + absen.PrintIp + "', '" + absen.StatusKerja + "')", conn);
                 await cmd.ExecuteNonQueryAsync();
+                conn.Close();
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"error message: {ex.Message}");
+                Console.WriteLine($"Error message InsertFinger: {ex.Message}");
                 throw;
             }
         }

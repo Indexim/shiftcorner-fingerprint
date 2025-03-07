@@ -211,14 +211,16 @@ namespace AbsensiCabang
                     cmd.Append("site project Indexim\n");
                     cmd.Append("\x1b\x21\x10"); // double height text
                     cmd.Append("---------------------------------\n");
+                    cmd.Append("\x1b\x21\x00"); // normal text
                     cmd.Append($"{DateTime.Now:dd MMMM yyyy, HH:mm:ss}\n");
+                    cmd.Append("\x1b\x21\x10"); // double height text
                     cmd.Append("---------------------------------\n");
                     cmd.Append("\x1b\x61\x00"); // align left
                     cmd.Append("NIK       : " + (absen.Nik ?? "") + "\n");
                     cmd.Append("Nama      : " + (absen.NamaLengkap ?? "") + "\n");
                     cmd.Append("Shift     : " + (absen.Shift ?? "") + "\n");
-                    cmd.Append("Hauler    : " + (absen.Hauler ?? "") + "\n");
-                    cmd.Append("Loader    : " + (absen.Loader ?? "") + "\n");
+                    cmd.Append("Unit      : " + (absen.Hauler ?? "") + "\n");
+                    cmd.Append("Lokasi    : " + (absen.Loader ?? "") + "\n");
                     cmd.Append("Transport : " + (absen.Transportasi ?? "") + "\n");
                     cmd.Append("Tidur     : " + (absen.KategoriTidur ?? "") + "\n");
                     cmd.Append("\x1b\x61\x01"); // align center
